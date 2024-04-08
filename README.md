@@ -1,12 +1,18 @@
-- 👋 Hi, I’m @Sprr0w
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+console.log("Simulando creación de la carpeta 'GitHub' en Google Drive");
 
-<!---
-Sprr0w/Sprr0w is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+name: Simular creación de carpeta en Google Drive
+
+on:
+  push:
+    branches:
+      - main  # o el nombre de tu rama principal
+
+jobs:
+  simular-creacion-carpeta:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout del repositorio
+      uses: actions/checkout@v2
+
+    - name: Ejecutar script falso de creación de carpeta
+      run: node fake_script.js
